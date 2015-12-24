@@ -36,10 +36,8 @@ ip net e h4 ip a a 20.0.0.4/24 dev veth4_20
 ip net e h4 ip l s veth4_20 up
 
 brctl addbr br0
-#РїРѕРґРЅСЏР»Рё Р±СЂРёРґР¶
 ip l s br0 up
 
-# Р·Р°СЃРѕРІС‹РІР°РµРј РґСЂСѓРіРёРµ РєРѕРЅС†С‹ С€РЅСѓСЂРєРѕРІ РІ Р±СЂРёРґР¶ Рё РїРѕРґРЅРёРјР°РµРј РёРЅС‚РµСЂС„РµР№СЃС‹
 brctl addif br0 veth_h2
 ip l s veth_h2 up
 brctl addif br0 veth_h3
@@ -48,26 +46,18 @@ brctl addif br0 veth_h4
 ip l s veth_h4 up
 
 
-#СЃРѕР·РґР°Р»Рё vlan 10 РґР»СЏ Р±СЂРёРґР¶Р°
 ip l a link br0 name br0_10 type vlan id 10
-#РїРѕРІРµСЃРёР»Рё РЅР° РЅРµРіРѕ ip
 ip a a 10.0.0.1/24 dev br0_10
-#РїРѕРґРЅРёРјР°РµРј
 ip l s br0_10 up
 
-#СЃРѕР·РґР°Р»Рё vlan 20 РґР»СЏ Р±СЂРёРґР¶Р°
 ip l a link br0 name br0_20 type vlan id 20
-#РїРѕРІРµСЃРёР»Рё РЅР° РЅРµРіРѕ ip
 ip a a 20.0.0.1/24 dev br0_20
-#РїРѕРґРЅРёРјР°РµРј
 ip l s br0_20 up
 
-# РїРѕРґРЅРёРјР°РµРј lowback
 ip net e h2 ip l s lo up
 ip net e h3 ip l s lo up
 ip net e h4 ip l s lo up
 
-#СЂР°СѓС‚ С‚Р°Р±Р»РёС†Р°
 ip net e h4 ip r a 10.0.0.2 dev veth4_20
 ip net e h4 ip r a 10.0.0.1 dev veth4_20
 ip net e h3 ip r a 20.0.0.2 dev veth3_10
