@@ -1,12 +1,12 @@
 Python bindings to the OpenStack Sahara API
 ===========================================
 
-.. image:: https://img.shields.io/pypi/v/python-saharaclient.svg
-    :target: https://pypi.python.org/pypi/python-saharaclient/
+.. image:: https://img.shields.io/pypi/v/sahara-tests.svg
+    :target: https://pypi.python.org/pypi/sahara-tests/
     :alt: Latest Version
 
-.. image:: https://img.shields.io/pypi/dm/python-saharaclient.svg
-    :target: https://pypi.python.org/pypi/python-saharaclient/
+.. image:: https://img.shields.io/pypi/dm/sahara-tests.svg
+    :target: https://pypi.python.org/pypi/sahara-tests/
     :alt: Downloads
 
 This is a client for the OpenStack Sahara API. There's a Python API (the
