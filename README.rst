@@ -1,4 +1,4 @@
-TEST MERGE
+TEST MERGE 2
 Python bindings to the OpenStack Sahara API
 ===========================================
 
